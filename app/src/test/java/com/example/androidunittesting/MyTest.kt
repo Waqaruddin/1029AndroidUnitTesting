@@ -28,6 +28,7 @@ class MyTest {
 
     @Test
     fun test2(){
+        println("2")
 
     }
 }

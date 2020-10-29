@@ -5,6 +5,15 @@ import org.junit.Test
 
 class TestWithPattern {
 
+
+    //better do NOT do this
+//    private lateinit var myObject: Addition
+//
+//    @Before
+//    fun before(){
+//         myObject = Addition()
+//    }
+
     @Test
     fun test(){
         //Arrange Act Assert (AAA) pattern
@@ -19,6 +28,8 @@ class TestWithPattern {
 
         //Assert
         Assert.assertEquals(4, actual)
+        //Assert.assertEquals(4, Addition().add(2,2))
+
 
     }
 }
