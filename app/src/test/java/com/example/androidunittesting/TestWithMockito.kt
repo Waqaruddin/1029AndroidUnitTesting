@@ -17,7 +17,7 @@ class TestWithMockito {
         val myObject = Mockito.mock(AdditionForMockito::class.java)
 
         //pre programming the object
-        //Mockito.`when`(myObject. inStock(5,6)).thenReturn(4)
+        Mockito.`when`(myObject.add(5, 6)).thenReturn(4)
 
         //or
 
@@ -30,15 +30,14 @@ class TestWithMockito {
         val actual = myObject.add(5, 6)
 
         //Assert
-        Assert.assertEquals(11, actual)
+        Assert.assertEquals(4, actual)
     }
 }
 
 open class AdditionForMockito {
-    fun add(a: Int, b: Int): Int {
+    open fun add(a: Int, b: Int): Int {
         return a + b
     }
-
 
 
 }
