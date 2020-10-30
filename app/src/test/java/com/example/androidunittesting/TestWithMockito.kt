@@ -1,5 +1,6 @@
 package com.example.androidunittesting
 
+import org.junit.Assert
 import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito
@@ -13,7 +14,7 @@ class TestWithMockito {
 
         //or
 
-        //val myObject = Mockito.mock(AdditionForMockito::class.java)
+        val myObject = Mockito.mock(AdditionForMockito::class.java)
 
         //pre programming the object
         //Mockito.`when`(myObject. inStock(5,6)).thenReturn(4)
@@ -26,14 +27,14 @@ class TestWithMockito {
         //whenever myObject.add(3,4) 6
 
         //Act
-        //val actual = myObject.add(5, 6)
+        val actual = myObject.add(5, 6)
 
         //Assert
-        //Assert.assertEquals(4, actual)
+        Assert.assertEquals(11, actual)
     }
 }
 
-class AdditionForMockito {
+open class AdditionForMockito {
     fun add(a: Int, b: Int): Int {
         return a + b
     }
